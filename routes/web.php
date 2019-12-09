@@ -14,4 +14,4 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/tasks', 'TaskController@index');
+Route::resource('task', 'TaskController');
