@@ -13,4 +13,10 @@ class TaskController extends Controller
         $tasks = Task::all();
         return view('task/index', compact('tasks'));
     }
+
+    public function show($id)
+    {
+        $task = Task::findOrFail($id);
+        return view('task/show', compact('task'));
+    }
 }

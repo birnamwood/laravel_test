@@ -1,12 +1,13 @@
+<h1>タスク一覧</h1>
 <table>
   <thead>
-    <tr>
-      <td>タスク</td>
-    </tr>
   </thead>
   <tbody>
     @foreach($tasks as $task)
     <tr>
+      <td>
+        <a href="/task/{{ $task->id }}/">{{ $task->id }}</a>
+      </td>
       <td>{{ $task->body }}</td>
     </tr>
     @endforeach
